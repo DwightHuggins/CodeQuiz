@@ -21,6 +21,11 @@ var buttonD = document.getElementById("d");
 
 // Quiz Questions
 var quizQuestions = [
+//   {
+//     question: "How many elements can you apply an 'ID' attribute to?",
+//     choices: ["as many as you want", "3", "2", "1"],
+//     correctAnswer: 3,
+//   },
   {
     question: "How many elements can you apply an 'ID' attribute to?",
     choiceA: "As many as you want",
@@ -125,11 +130,25 @@ function generateQuizQuestion() {
   }
   var currentQuestion = quizQuestions[currentQuestionIndex];
   questionsEl.innerHTML = "<p>" + currentQuestion.question + "</p>";
+
+//   document.getElementById("options").innerHTML = "";
+//   for (var i = 0; i < currentQuestion.choices.length; i++) {
+//     var choice = document.createElement("button");
+//     choice.value = currentQuestion.choices[i];
+//     choice.textContent = currentQuestion.choices[i];
+//     choice.onclick = clickedChoice
+//     document.getElementById("options").appendChild(choice);
+//   }
+
   buttonA.innerHTML = currentQuestion.choiceA;
   buttonB.innerHTML = currentQuestion.choiceB;
   buttonC.innerHTML = currentQuestion.choiceC;
   buttonD.innerHTML = currentQuestion.choiceD;
 }
+
+// function clickedChoice(){
+//     console.log(this)
+// }
 
 // Start Quiz function starts the TimeRanges, hides the start button, and displays the first quiz question.
 function startQuiz() {
